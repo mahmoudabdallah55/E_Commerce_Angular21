@@ -1,7 +1,32 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+
+import { Public } from './public';
+import { Home } from './home/home';
+import { Products } from './products/products';
+
+const routes: Routes = [
+  {
+    path:"",
+    component:Public,
+    children:[
+      {
+        path:"home",
+        component:Home
+      },
+      {
+        path:"products",
+        component:Products
+      },
+      {
+        path:"",
+        pathMatch:"full",
+        redirectTo:"/public/home"
+      }
+    ]
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

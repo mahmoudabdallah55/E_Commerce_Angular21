@@ -1,0 +1,20 @@
+<header class="d-flex justify-content-between align-items-center">
+  <div class="fw-bold logo">Krist</div>
+  <nav>
+    <a href="/">Home</a>
+    <div class="shop-menu" (mouseenter)="showMegaMenu(true)" (mouseleave)="showMegaMenu(false)">
+      <a href="#">Shop <i class="fa-solid fa-angle-down"></i></a>
+      <app-mega-menu [showMenu]="showMenu" />
+    </div>
+    <a href="/story">Our Story</a>
+    <a href="/blog">Blog</a>
+    <a href="/contact">Contact Us</a>
+  </nav>
+  <div class="d-flex align-items-center justify-content-between">
+    <span class="cursor-pointer"><i class="fa-solid fa-magnifying-glass"></i></span>
+    <span class="px-3 cursor-pointer"><i class="fa-regular fa-heart"></i></span>
+    <span class="ps-2 pe-3 cursor-pointer"><i class="fa-solid fa-store"></i></span>
+    <button class="btn btn-dark" routerLink="/login">Login</button>
+  </div>
+</header>
+
